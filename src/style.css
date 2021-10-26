@@ -1,16 +1,15 @@
 body {
-    background-color: bisque;
+  background-color: bisque;
 }
 
 .hello {
-    color: red;
-    background: url('./children1.jpg');
-    background-repeat: no-repeat;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-  }
+  color: red;
+  background: url('./children1.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
