@@ -1,41 +1,49 @@
-# Awesome-Books Project.
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This project is built with HTML, CSS and JavaScript.
+# To Do List: structure
 
-> Implemented Functions by using JavaScript Classes to add and remove books.
+## Description
+> creating a starting structure of building a to do list
+
 
 ## Built With
-### Major languages
-- HTML
-- CSS
-- Javascript
 
-### Technologies used
-- Github
-- Git
-- Visual Studio Code
+- html
+- css
+- javascript
 
+## Procedure to clone project
+- open your terminal
+- type git clone https://github.com/xtrahuman/add-remove-books.git
+- type cd add-remove-books to change directory to the folder of the project
+- run the project in your local machine
 
-## Getting Started
-To get a local copy up and running follow these simple example steps.
-git clone https://github.com/Danieldotcomcoder/Awesome-Books
+## project link
+click on the website to view project
 
+- link to website: [website link](https://xtrahuman.github.io/add-remove-books/)
 
-## Author
-👤 Daniel Shdeed
+## Author 1
 
-- GitHub: [https://github.com/Danieldotcomcoder)]
-- Twitter: [https://twitter.com/DannyDotcoder)]
-- LinkedIn: [https://www.linkedin.com/in/daniel-shdeed-832b03115/]
+👤 **Okpara Tochukwu**
+
+- GitHub: [@xtrahuman](https://github.com/xtrahuman)
+- Twitter: [@xtrahuman](https://twitter.com/xtrahuman)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/tochukwu-okpara-449528197)
+
 
 ## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
-
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
+
 Give a ⭐️ if you like this project!
 
-📝 License
-This project is MIT licensed.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
