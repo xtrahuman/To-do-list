@@ -11,6 +11,7 @@
 - html
 - css
 - javascript
+- webpack
 
 ## Procedure to clone project
 - open your terminal
