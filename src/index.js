@@ -1,4 +1,4 @@
-import _ from 'lodash'; // eslint-disable-line
+import _ from 'lodash'; 
 import './style.css';
 
 const listed = document.querySelector('.listed');
