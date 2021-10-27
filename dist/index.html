@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/31074aacc5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>To Do List</title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <main>
+        <h1>My todo list</h1>
+        <section class="form-sect justify-content-center">
+            <div class="all-list container">
+                <ul class="list-unstyled style-list">
+                    <li class="d-flex to-do">
+                        <h2>to do list</h2>
+                        <p><i class="fa fa-refresh"></i></p>
+                    </li>
+                    <li>
+                        <form class="form d-flex">
+                            <label for="add-list"></label>
+                            <input type="text" id="add-list" name="add-list" class="add-section"
+                                placeholder="add to your list..." required>
+                            <div class="button-flex">
+                                <button type="submit" class="btn add"><i class="fa fa-level-down"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+                <div>
+                    <ul class="listed list-unstyled">
+
+                    </ul>
+                </div>
+                <div class="clear-all">
+                    <p>clear all completed</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

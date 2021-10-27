@@ -1,0 +1,130 @@
+body {
+  background-color: #f6f6f6;
+}
+
+main h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.fa {
+  color: #b8b8b8;
+  font-size: 12px;
+}
+
+.to-do {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.style-list h2 {
+  font-size: 16px;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.style-list p {
+  margin-bottom: 0;
+}
+
+.style-list .fa-refresh {
+  margin-right: 15px;
+}
+
+.fa-ellipsis-v {
+  display: inline;
+}
+
+.fa-trash-o {
+  display: none;
+  font-size: 16px;
+}
+
+.show {
+  display: inline;
+}
+
+.unshow {
+  display: none;
+}
+
+.style-list input[type="text"] {
+  padding: 0 15px;
+}
+
+ul.style-list li,
+ul.listed li {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f6f6f6;
+  height: 45px;
+}
+
+.add-section,
+.added-section {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.form-sect .container {
+  width: 50%;
+  background: #fff;
+  padding: 0;
+  filter: drop-shadow(0 8px 16px rgb(184, 184, 184, 0.48));
+  margin-top: 80px;
+}
+
+.fa-level-down {
+  transform: rotate(90deg);
+}
+
+input[type="checkbox"] {
+  width: 14px !important;
+  height: 14px !important;
+  align-self: center;
+  margin: 0 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 2px solid #b8b8b8;
+  box-shadow: none;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 1em;
+  background: #fff;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: none;
+}
+
+.clear-all {
+  display: flex;
+  height: 60px;
+  text-align: center;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-all p {
+  margin-bottom: 0;
+}
+
+.clear-all p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
