@@ -102,7 +102,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked::after {
   content: "✔";
-  color: white;
+  color: green;
   outline: none;
 }
 
