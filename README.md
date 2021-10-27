@@ -5,6 +5,10 @@
 ## Description
 > creating a starting structure of building a to do list
 
+Demo view                                |  static view
+:---------------------------------------:|:---------------------------------------:
+![](./src/Animation.gif)                 |  ![](./src/headshot.PNG)
+
 
 ## Built With
 
@@ -15,16 +19,18 @@
 
 ## Procedure to clone project
 - open your terminal
-- type git clone https://github.com/xtrahuman/add-remove-books.git
-- type cd add-remove-books to change directory to the folder of the project
-- run the project in your local machine
+- type git clone https://github.com/xtrahuman/To-do-list.git
+- type cd To-do-list to change directory to the folder of the project
+- in your terminal npm install to install app dependencies
+- run npm run build in your terminal to build the project.
+- navigate to index.html inside the dist directory
+- open with live server or type alt l o if live-server is installed in your vscode.
 
 ## project link
-click on the website to view project
 
-- link to website: [website link](https://xtrahuman.github.io/add-remove-books/)
+- n live view currently for the project
 
-## Author 1
+## Author
 
 👤 **Okpara Tochukwu**
 
