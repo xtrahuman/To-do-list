@@ -27,8 +27,8 @@ Demo view                                |  static view
 - open with live server or type alt l o if live-server is installed in your vscode.
 
 ## project link
-
-- no live view currently for the project
+kindly click the link below to view the website
+- website link: [live link](https://xtrahuman.github.io/To-do-list/)
 
 ## Author
 

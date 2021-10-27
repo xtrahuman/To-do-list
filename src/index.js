@@ -1,31 +1,34 @@
 import './style.css';
+import checker from './checker.js';
 
 const listed = document.querySelector('.listed');
 const clearAll = document.querySelector('.clear-all');
 const toDo = [{
   description: 'my first task',
   completed: false,
-  index: 0,
+  index: 1,
 },
 {
   description: 'my second task',
   completed: false,
-  index: 3,
+  index: 2,
 },
 {
   description: 'my third task',
   completed: false,
-  index: 2,
+  index: 3,
 },
 {
   description: 'my fourth task',
   completed: false,
-  index: 1,
+  index: 4,
 },
 ];
 
-function component() {
-  const listArr = toDo.map((i) => `
+const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : toDo);
+
+const component = (store) => {
+  const listArr = store.map((i) => `
      <li class="d-flex align-list">
          <label for="checklist"></label>
          <input type='checkbox' name="checklist">
@@ -42,6 +45,16 @@ function component() {
   const deleteIcon = document.querySelectorAll('.fa-trash-o');
   const menuIcon = document.querySelectorAll('.fa-ellipsis-v');
   added.forEach((element, index) => {
+    checkList[index].checked = store[index].completed;
+
+    const linethrough = (index) => {
+      if (checkList[index].checked) {
+        addedSection[index].style.textDecoration = 'line-through';
+      } else {
+        addedSection[index].style.textDecoration = '';
+      }
+    };
+    linethrough(index);
     element.addEventListener('focus', () => {
       document.querySelectorAll('.align-list')[index].style.backgroundColor = '#ECE883';
       element.style.backgroundColor = '#ECE883';
@@ -56,17 +69,13 @@ function component() {
       deleteIcon[index].classList.remove('show');
       menuIcon[index].classList.remove('unshow');
     });
-    checkList[index].addEventListener('change', () => {
-      if (checkList[index].checked) {
-        addedSection[index].style.textDecoration = 'line-through';
-      } else {
-        addedSection[index].style.textDecoration = '';
-        clearAll.style.color = '';
-      }
-    });
+    checker(checkList, index, store, addedSection, clearAll);
   });
-}
+};
 
-window.addEventListener('DOMContentLoaded', component);
+window.addEventListener('DOMContentLoaded', () => {
+  const storeList = getLocalStorage();
+  component(storeList);
 
-toDo.sort((i, j) => i.index - j.index);
+  localStorage.setItem('todo', JSON.stringify(storeList));
+});
