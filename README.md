@@ -28,7 +28,7 @@ Demo view                                |  static view
 
 ## project link
 
-- n live view currently for the project
+- no live view currently for the project
 
 ## Author
 

@@ -2,7 +2,7 @@ import './style.css';
 
 const listed = document.querySelector('.listed');
 const clearAll = document.querySelector('.clear-all');
-const ToDo = [{
+const toDo = [{
   description: 'my first task',
   completed: false,
   index: 0,
@@ -10,7 +10,7 @@ const ToDo = [{
 {
   description: 'my second task',
   completed: false,
-  index: 1,
+  index: 3,
 },
 {
   description: 'my third task',
@@ -20,12 +20,12 @@ const ToDo = [{
 {
   description: 'my fourth task',
   completed: false,
-  index: 3,
+  index: 1,
 },
 ];
 
 function component() {
-  const listArr = ToDo.map((i) => `
+  const listArr = toDo.map((i) => `
      <li class="d-flex align-list">
          <label for="checklist"></label>
          <input type='checkbox' name="checklist">
@@ -68,3 +68,9 @@ function component() {
 }
 
 window.addEventListener('DOMContentLoaded', component);
+
+
+toDo.sort( (i, j) => {
+  return i.index - j.index
+});
+console.log(toDo);
