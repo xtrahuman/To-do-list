@@ -69,8 +69,4 @@ function component() {
 
 window.addEventListener('DOMContentLoaded', component);
 
-
-toDo.sort( (i, j) => {
-  return i.index - j.index
-});
-console.log(toDo);
+toDo.sort((i, j) => i.index - j.index);
