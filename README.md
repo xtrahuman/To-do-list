@@ -7,7 +7,7 @@
 
 Demo view                                |  static view
 :---------------------------------------:|:---------------------------------------:
-![](./src/Animation.gif)                 |  ![](./src/headshot.PNG)
+![](./src/Animation2.gif)                 |  ![](./src/headshot.PNG)
 
 
 ## Built With
