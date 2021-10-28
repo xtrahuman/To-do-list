@@ -42,6 +42,11 @@ ul {
 .fa-trash-o {
   display: none;
   font-size: 16px;
+  transition: 0.3s;
+}
+
+.fa-trash-o:hover {
+  color: #000;
 }
 
 .show {

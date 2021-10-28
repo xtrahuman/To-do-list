@@ -1,33 +1,16 @@
 import './style.css';
 import checker from './checker.js';
+import addList, { addMore } from './addList.js';
+import filterTodo, { filterSingle } from './filterTodo.js';
 
 const listed = document.querySelector('.listed');
 const clearAll = document.querySelector('.clear-all');
-const toDo = [{
-  description: 'my first task',
-  completed: false,
-  index: 1,
-},
-{
-  description: 'my second task',
-  completed: false,
-  index: 2,
-},
-{
-  description: 'my third task',
-  completed: false,
-  index: 3,
-},
-{
-  description: 'my fourth task',
-  completed: false,
-  index: 4,
-},
-];
+const clearBtn = document.querySelector('.clear-btn');
+const toDoArr = [];
 
-const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : toDo);
+const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : toDoArr);
 
-const component = (store) => {
+export default function component(store) {
   const listArr = store.map((i) => `
      <li class="d-flex align-list">
          <label for="checklist"></label>
@@ -39,14 +22,21 @@ const component = (store) => {
          </div>
      </li>`);
   listed.innerHTML = listArr.join('');
+  clearBtn.addEventListener('click', () => {
+    const newStore = filterTodo(store);
+    component(newStore);
+  });
   const added = document.querySelectorAll('input[type=text][name=addedlist]');
   const checkList = document.querySelectorAll('input[type=checkbox][name=checklist]');
   const addedSection = document.querySelectorAll('.added-section');
   const deleteIcon = document.querySelectorAll('.fa-trash-o');
   const menuIcon = document.querySelectorAll('.fa-ellipsis-v');
+  const delbtn = document.querySelectorAll('.added');
   added.forEach((element, index) => {
+    // updates checklist status
     checkList[index].checked = store[index].completed;
-
+    store[index].index = index;
+    localStorage.setItem('todo', JSON.stringify(store));
     const linethrough = (index) => {
       if (checkList[index].checked) {
         addedSection[index].style.textDecoration = 'line-through';
@@ -55,10 +45,20 @@ const component = (store) => {
       }
     };
     linethrough(index);
+
+    // window.addEventListener('DOMContentLoaded',()=>addMore(element))
+    // delete singletask listener
+    delbtn[index].addEventListener('click', () => {
+      const singleRemoved = filterSingle(store, index);
+      component(singleRemoved);
+    });
+    // checks the focus and blur status of task input
     element.addEventListener('focus', () => {
       document.querySelectorAll('.align-list')[index].style.backgroundColor = '#ECE883';
+      addedSection[index].style.textDecoration = '';
       element.style.backgroundColor = '#ECE883';
       checkList[index].style.backgroundColor = '#ECE883';
+      checkList[index].style.color = 'red';
       deleteIcon[index].classList.add('show');
       menuIcon[index].classList.add('unshow');
     });
@@ -68,14 +68,23 @@ const component = (store) => {
       checkList[index].style.backgroundColor = '';
       deleteIcon[index].classList.remove('show');
       menuIcon[index].classList.remove('unshow');
+      // observe checker to update linethrough feature
+      if (checkList[index].checked) {
+        addedSection[index].style.textDecoration = 'line-through';
+      }
     });
+
+    element.addEventListener('change', () => {
+      const edited = addMore(element, store, index);
+      component(edited);
+    });
+
+    // checks and convert task to complete
     checker(checkList, index, store, addedSection, clearAll);
   });
-};
+}
 
 window.addEventListener('DOMContentLoaded', () => {
-  const storeList = getLocalStorage();
-  component(storeList);
-
-  localStorage.setItem('todo', JSON.stringify(storeList));
+  addList();
+  component(getLocalStorage());
 });
