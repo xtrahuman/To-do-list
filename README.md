@@ -1,13 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do List: structure
+# To Do List
 
 ## Description
-> creating a starting structure of building a to do list
+> creating a simple todo list where u can add new task, edit, delete tasks and delete all completed tasks
 
 Demo view                                |  static view
 :---------------------------------------:|:---------------------------------------:
-![](./src/Animation.gif)                 |  ![](./src/headshot.PNG)
+![](./src/Animation2.gif)                 |  ![](./src/headshot.PNG)
 
 
 ## Built With
