@@ -10,7 +10,7 @@ const toDoArr = [];
 
 const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : toDoArr);
 
-export default function component(store) {
+function component(store) {
   const listArr = store.map((i) => `
      <li class="d-flex align-list">
          <label for="checklist"></label>
@@ -46,7 +46,6 @@ export default function component(store) {
     };
     linethrough(index);
 
-    // window.addEventListener('DOMContentLoaded',()=>addMore(element))
     // delete singletask listener
     delbtn[index].addEventListener('click', () => {
       const singleRemoved = filterSingle(store, index);
