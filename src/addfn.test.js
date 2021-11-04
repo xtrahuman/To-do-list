@@ -1,7 +1,6 @@
 import addfn, { component, filterSingle } from './addfn.js';
 import localStorage from './store.js';
 
-Object.defineProperty(window, 'localStorage', { value: localStorage });
 const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : []);
 describe('check mocked local storage', () => {
   test('check added to local storage', () => {

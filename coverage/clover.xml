@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636030236077" clover="3.2.0">
-  <project timestamp="1636030236077" name="All files">
+<coverage generated="1636038923816" clover="3.2.0">
+  <project timestamp="1636038923816" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9" elements="36" coveredelements="36" complexity="0" loc="25" ncloc="25" packages="1" files="3" classes="3"/>
     <file name="addfn.js" path="C:\Users\user\Documents\microverse_project\module2\To-do-list\src\addfn.js">
       <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
