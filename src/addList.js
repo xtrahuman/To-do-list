@@ -1,18 +1,9 @@
-import Todo from './listclass.js';
+import addfn from './addfn.js';
 
-const toDoArr = [];
-const addList = document.getElementById('add-list');
 const addbtn = document.querySelector('.form');
-const getLocalStorage = () => (localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : toDoArr);
 export default function add() {
   addbtn.addEventListener('submit', () => {
-    let listInfo;
-    if (!addList.validity.valueMissing) {
-      listInfo = new Todo(addList.value);
-      const storeList = getLocalStorage();
-      storeList.push(listInfo);
-      localStorage.setItem('todo', JSON.stringify(storeList));
-    }
+    addfn();
   });
 }
 
