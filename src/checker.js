@@ -1,4 +1,4 @@
-export default function checker(checkList, index, store, addedSection, clearAll) {
+export default function checker(checkList, index, store, addedSection) {
   checkList[index].addEventListener('change', () => {
     if (checkList[index].checked) {
       store[index].completed = checkList[index].checked;
@@ -6,7 +6,6 @@ export default function checker(checkList, index, store, addedSection, clearAll)
       localStorage.setItem('todo', JSON.stringify(store));
     } else {
       addedSection[index].style.textDecoration = '';
-      clearAll.style.color = '';
       store[index].completed = false;
       localStorage.setItem('todo', JSON.stringify(store));
     }
