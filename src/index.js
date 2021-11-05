@@ -4,7 +4,6 @@ import addList, { addMore } from './addList.js';
 import filterTodo, { filterSingle } from './filterTodo.js';
 
 const listed = document.querySelector('.listed');
-const clearAll = document.querySelector('.clear-all');
 const clearBtn = document.querySelector('.clear-btn');
 const toDoArr = [];
 
@@ -79,7 +78,7 @@ function component(store) {
     });
 
     // checks and convert task to complete
-    checker(checkList, index, store, addedSection, clearAll);
+    checker(checkList, index, store, addedSection);
   });
 }
 

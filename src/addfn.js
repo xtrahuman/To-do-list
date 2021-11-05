@@ -30,6 +30,7 @@ function component(store) {
        </li>`);
   listed.innerHTML = listArr.join('');
   const checkList = document.querySelectorAll('.align-list');
+
   return checkList;
 }
 
@@ -38,4 +39,28 @@ function filterSingle(store, index) {
   localStorage.setItem('todo', JSON.stringify(store));
   return store;
 }
-export { addfn as default, component, filterSingle };
+
+function checker(checkList, index, store) {
+  let checkComp = checkList[index];
+  checkComp = {
+    checked: true,
+  };
+  store[index].completed = checkComp.checked;
+  localStorage.setItem('todo', JSON.stringify(store));
+}
+
+function filterTodo(todo) {
+  const newArr = todo.filter((status) => status.completed === false);
+  localStorage.setItem('todo', JSON.stringify(newArr));
+  return newArr;
+}
+
+function addMore(added, store, index) {
+  store[index].description = added;
+  localStorage.setItem('todo', JSON.stringify(store));
+  return store;
+}
+
+export {
+  addfn as default, component, filterSingle, checker, filterTodo, addMore,
+};
